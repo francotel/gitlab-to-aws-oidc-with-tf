@@ -47,8 +47,10 @@ This project configures an **OIDC Identity Provider** in AWS to allow **GitLab C
 ### GitLab CI Job Example:
 
 ```yaml
-assume-role-example:
-  image: amazon/aws-cli:latest
+assume-role-oidc:
+  image:
+      name: amazon/aws-cli:2.2.18
+      entrypoint: [""]
   id_tokens:
     MY_OIDC_TOKEN:
       aud: https://gitlab.com
