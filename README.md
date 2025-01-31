@@ -50,7 +50,7 @@ This project configures an **OIDC Identity Provider** in AWS to allow **GitLab C
 assume-role-example:
   image: amazon/aws-cli:latest
   id_tokens:
-    GITLAB_OIDC_TOKEN:
+    MY_OIDC_TOKEN:
       aud: https://gitlab.com
   before_script:
     - mkdir -p ~/.aws
