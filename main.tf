@@ -18,7 +18,7 @@ data "aws_iam_policy_document" "assume-role-policy" {
       identifiers = [aws_iam_openid_connect_provider.gitlab.arn]
     }
     condition {
-      test     = "StringEquals"
+      test     = "StringLike"
       variable = "${aws_iam_openid_connect_provider.gitlab.url}:${var.match-field}"
       values   = var.match-value
     }

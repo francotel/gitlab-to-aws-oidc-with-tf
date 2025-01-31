@@ -6,4 +6,5 @@ cost       = "0001-oidc"
 
 gitlab-url  = "https://gitlab.com"
 aud-value   = "https://gitlab.com"
+match-field = "sub"
 match-value = ["project_path:francotel/*:ref_type:branch:ref:main"]
